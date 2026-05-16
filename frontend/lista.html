@@ -1,0 +1,167 @@
+<style>
+    .card-product {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #1a1a1a; 
+        border: 1px solid #333;
+        color: white;
+    }
+    .card-product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2); 
+        border-color: #dc3545; 
+    }
+    .product-img {
+        height: 220px;
+        object-fit: cover;
+        filter: grayscale(20%) contrast(110%);
+    }
+</style>
+<div class="bg-dark py-5 border-bottom border-secondary">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold text-white text-uppercase">Catálogo <span class="text-danger">Orc</span></h1>
+        <p class="text-secondary">El arsenal definitivo para tu setup profesional.</p>
+    </div>
+</div>
+
+<div class="container mt-5">    
+  
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">  
+        
+        <!-- Producto 1-->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://lavictoria.ec/wp-content/uploads/2025/08/MEMORIA-RAM-DDR5-16GB-6000MT-S-RGB-LACER-BLADE-AX5U6000C4816G-SLABRWH-XPG-1-600x600.jpg" class="card-img-top product-img" alt="RAM">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">16GB RAM DDR5 4800Mhz</h5>
+                    <h6 class="text-danger mb-3">$999</h6>
+                    <p class="card-text text-secondary small">Aceptamos riñones. Ideal para abrir 3 pestañas de Chrome al mismo tiempo sin que explote nada.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://www.techpowerup.com/img/FpezccOnRREIjDfO.jpg" class="card-img-top product-img" alt="GPU">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">NVIDIA RTX 4090 24GB</h5>
+                    <h6 class="text-danger mb-3">$2,499</h6>
+                    <p class="card-text text-secondary small">Viene con un extintor de regalo. Corre el Minecraft con 10,000 mods y shaders nucleares.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://d1q3zw97enxzq2.cloudfront.net/images/Core_i9-14900KS_vs_i9-14900K.width-1000.format-webp.webp" class="card-img-top product-img" alt="CPU">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Intel Core i9-14900K</h5>
+                    <h6 class="text-danger mb-3">$650</h6>
+                    <p class="card-text text-secondary small">Tan rápido que termina tus tareas antes de que pienses en procrastinar. Incluye calefacción central.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 4-->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://www.pcworld.com/wp-content/uploads/2025/04/Screenshot-2022-10-29-at-1.20.18-PM.png?w=1024" class="card-img-top product-img" alt="Motherboard">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">ROG STRIX Z790-E Gaming</h5>
+                    <h6 class="text-danger mb-3">$450</h6>
+                    <p class="card-text text-secondary small">Tiene más luces RGB que una discoteca de los 80. Soporta hasta tus malas decisiones.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 5-->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://hardzone.es/app/uploads-hardzone.es/2022/10/Samsung-990-PRO-Review-portada-1200x675.jpg" class="card-img-top product-img" alt="SSD">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Samsung 990 Pro 2TB</h5>
+                    <h6 class="text-danger mb-3">$180</h6>
+                    <p class="card-text text-secondary small">Carga Windows antes de que llegues a la silla. Velocidad absurda garantizada.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://www.cclonline.com/images/avante/RM1000x_RENDERS_03.jpg" class="card-img-top product-img" alt="PSU">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Corsair RM1000x 80+ Gold</h5>
+                    <h6 class="text-danger mb-3">$210</h6>
+                    <p class="card-text text-secondary small">Energía pura. Silenciosa como el vacío del espacio y estable como tu ex no lo era.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://nzxt.com/cdn/shop/files/Cooling_KrakenElite_RGB_WH_360_Carousel_Hero_EN.png?v=1758538277&width=1000" class="card-img-top product-img" alt="AIO">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Kraken Elite 360 RGB</h5>
+                    <h6 class="text-danger mb-3">$280</h6>
+                    <p class="card-text text-secondary small">Mantiene tu CPU más frío que el corazón de ella. Pantalla LCD para poner memes mientras juegas.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://i.ytimg.com/vi/dUnp1r57U3s/maxresdefault.jpg" class="card-img-top product-img" alt="Case">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">NZXT H9 Flow White/Black</h5>
+                    <h6 class="text-danger mb-3">$190</h6>
+                    <p class="card-text text-secondary small">Mucho vidrio templado. Si no te gusta limpiar huellas dactilares, este no es para ti.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 9-->
+        <div class="col">   
+            <div class="card card-product h-100 shadow-sm">
+                <img src="https://www.lg.com/content/dam/channel/wcms/cl/images/monitores/27gr95qe-b_awh_escl_cl_c/gallery/DZ-01.jpg" class="card-img-top product-img" alt="Monitor">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Monitor OLED 27" 240Hz</h5>
+                    <h6 class="text-danger mb-3">$899</h6>
+                    <p class="card-text text-secondary small">Negros tan profundos que verás tu propio reflejo llorando por el precio. 240Hz de fluidez.</p>
+                    <div class="mt-auto pt-3">
+                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

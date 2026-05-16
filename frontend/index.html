@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en linea</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos/miestilo.css">
+</head>
+
+<body class="bg-dark text-light">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+
+    <a class="navbar-brand d-flex align-items-center" href="inicio.html" onclick="cargarPagina('inicio.html'); return false;">
+      <img src="/assets/logo.png" alt="Logo de la tienda" width="45" height="45" class="me-2 rounded">
+      <div class="d-flex flex-column lh-1">
+        <span class="fw-bold fs-5 text-dark">OrcStore</span>
+        <span class="text-secondary mt-1" style="font-size: 0.75rem;">Armamos tu PC ideal</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="inicio.html" onclick="cargarPagina('inicio.html'); return false;">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="lista.html" onclick="cargarPagina('lista.html'); return false;">Lista</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="login.html" onclick="cargarPagina('login.html'); return false;">Iniciar sesion</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" onclick="cargarPagina('about.html'); return false;">Acerca de</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+<div id="contenido">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/miscript.js"></script>
+<footer class="container py-5 border-top border-secondary mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <p class="text-secondary mb-0">
+                &copy; 2025–2026 OrcStore, Inc. &middot; 
+                <a href="about.html" class="text-decoration-none text-primary" onclick="cargarPagina('about.html'); return false;">Privacidad</a> &middot; 
+                <a href="about.html" class="text-decoration-none text-primary" onclick="cargarPagina('about.html'); return false;">Términos</a>
+            </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+            <a href="#" class="text-decoration-none text-primary">Ir arriba</a>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

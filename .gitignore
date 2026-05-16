@@ -1,0 +1,13 @@
+# Dependencias
+backend/node_modules/
+
+# Variables de entorno
+backend/.env
+
+# Archivos internos del proyecto
+instrucciones.md
+PLAN.md
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

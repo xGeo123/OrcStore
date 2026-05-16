@@ -1,0 +1,15 @@
+#miidentificador{
+color: red;
+font-size: 25px;
+border: 2px solid black;
+}
+.miclase{
+color: blue;
+font-size: 20px;
+border: 2px dashed green;
+}
+.img-carrusel {
+    height: 400px; 
+    object-fit: contain; 
+    background-color: #2b2b2b; 
+}
