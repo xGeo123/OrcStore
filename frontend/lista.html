@@ -1,14 +1,14 @@
 <style>
     .card-product {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background-color: #1a1a1a; 
+        background-color: #1a1a1a;
         border: 1px solid #333;
         color: white;
     }
     .card-product:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2); 
-        border-color: #dc3545; 
+        box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2);
+        border-color: #dc3545;
     }
     .product-img {
         height: 220px;
@@ -16,152 +16,76 @@
         filter: grayscale(20%) contrast(110%);
     }
 </style>
+
 <div class="bg-dark py-5 border-bottom border-secondary">
-    <div class="container text-center">
-        <h1 class="display-4 fw-bold text-white text-uppercase">Catálogo <span class="text-danger">Orc</span></h1>
-        <p class="text-secondary">El arsenal definitivo para tu setup profesional.</p>
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+            <h1 class="display-4 fw-bold text-white text-uppercase mb-1">Catálogo <span class="text-danger">Orc</span></h1>
+            <p class="text-secondary mb-0">El arsenal definitivo para tu setup profesional.</p>
+        </div>
+        <button class="btn btn-danger fw-bold px-4" onclick="abrirModalCrear()">+ Agregar Componente</button>
     </div>
 </div>
 
-<div class="container mt-5">    
-  
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">  
-        
-        <!-- Producto 1-->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://lavictoria.ec/wp-content/uploads/2025/08/MEMORIA-RAM-DDR5-16GB-6000MT-S-RGB-LACER-BLADE-AX5U6000C4816G-SLABRWH-XPG-1-600x600.jpg" class="card-img-top product-img" alt="RAM">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">16GB RAM DDR5 4800Mhz</h5>
-                    <h6 class="text-danger mb-3">$999</h6>
-                    <p class="card-text text-secondary small">Aceptamos riñones. Ideal para abrir 3 pestañas de Chrome al mismo tiempo sin que explote nada.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 2 -->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://www.techpowerup.com/img/FpezccOnRREIjDfO.jpg" class="card-img-top product-img" alt="GPU">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">NVIDIA RTX 4090 24GB</h5>
-                    <h6 class="text-danger mb-3">$2,499</h6>
-                    <p class="card-text text-secondary small">Viene con un extintor de regalo. Corre el Minecraft con 10,000 mods y shaders nucleares.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 3 -->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://d1q3zw97enxzq2.cloudfront.net/images/Core_i9-14900KS_vs_i9-14900K.width-1000.format-webp.webp" class="card-img-top product-img" alt="CPU">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Intel Core i9-14900K</h5>
-                    <h6 class="text-danger mb-3">$650</h6>
-                    <p class="card-text text-secondary small">Tan rápido que termina tus tareas antes de que pienses en procrastinar. Incluye calefacción central.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 4-->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://www.pcworld.com/wp-content/uploads/2025/04/Screenshot-2022-10-29-at-1.20.18-PM.png?w=1024" class="card-img-top product-img" alt="Motherboard">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">ROG STRIX Z790-E Gaming</h5>
-                    <h6 class="text-danger mb-3">$450</h6>
-                    <p class="card-text text-secondary small">Tiene más luces RGB que una discoteca de los 80. Soporta hasta tus malas decisiones.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 5-->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://hardzone.es/app/uploads-hardzone.es/2022/10/Samsung-990-PRO-Review-portada-1200x675.jpg" class="card-img-top product-img" alt="SSD">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Samsung 990 Pro 2TB</h5>
-                    <h6 class="text-danger mb-3">$180</h6>
-                    <p class="card-text text-secondary small">Carga Windows antes de que llegues a la silla. Velocidad absurda garantizada.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 6 -->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://www.cclonline.com/images/avante/RM1000x_RENDERS_03.jpg" class="card-img-top product-img" alt="PSU">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Corsair RM1000x 80+ Gold</h5>
-                    <h6 class="text-danger mb-3">$210</h6>
-                    <p class="card-text text-secondary small">Energía pura. Silenciosa como el vacío del espacio y estable como tu ex no lo era.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 7 -->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://nzxt.com/cdn/shop/files/Cooling_KrakenElite_RGB_WH_360_Carousel_Hero_EN.png?v=1758538277&width=1000" class="card-img-top product-img" alt="AIO">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Kraken Elite 360 RGB</h5>
-                    <h6 class="text-danger mb-3">$280</h6>
-                    <p class="card-text text-secondary small">Mantiene tu CPU más frío que el corazón de ella. Pantalla LCD para poner memes mientras juegas.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 8 -->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://i.ytimg.com/vi/dUnp1r57U3s/maxresdefault.jpg" class="card-img-top product-img" alt="Case">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">NZXT H9 Flow White/Black</h5>
-                    <h6 class="text-danger mb-3">$190</h6>
-                    <p class="card-text text-secondary small">Mucho vidrio templado. Si no te gusta limpiar huellas dactilares, este no es para ti.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Producto 9-->
-        <div class="col">   
-            <div class="card card-product h-100 shadow-sm">
-                <img src="https://www.lg.com/content/dam/channel/wcms/cl/images/monitores/27gr95qe-b_awh_escl_cl_c/gallery/DZ-01.jpg" class="card-img-top product-img" alt="Monitor">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold">Monitor OLED 27" 240Hz</h5>
-                    <h6 class="text-danger mb-3">$899</h6>
-                    <p class="card-text text-secondary small">Negros tan profundos que verás tu propio reflejo llorando por el precio. 240Hz de fluidez.</p>
-                    <div class="mt-auto pt-3">
-                        <button class="btn btn-danger w-100 fw-bold">AÑADIR AL CARRITO</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="productos-grid">
     </div>
 </div>
 
+<div class="modal fade" id="modalComponente" tabindex="-1" aria-labelledby="modal-titulo" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title fw-bold" id="modal-titulo">Agregar Componente</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form-componente">
+                    <input type="hidden" id="componente-id">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label text-secondary small text-uppercase fw-bold">Nombre</label>
+                            <input type="text" class="form-control bg-transparent text-white border-secondary" id="campo-nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-secondary small text-uppercase fw-bold">Categoría</label>
+                            <select class="form-select bg-dark text-white border-secondary" id="campo-categoria" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="CPU">CPU</option>
+                                <option value="GPU">GPU</option>
+                                <option value="RAM">RAM</option>
+                                <option value="Almacenamiento">Almacenamiento</option>
+                                <option value="Placa Madre">Placa Madre</option>
+                                <option value="Fuente de Poder">Fuente de Poder</option>
+                                <option value="Refrigeración">Refrigeración</option>
+                                <option value="Gabinete">Gabinete</option>
+                                <option value="Monitor">Monitor</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-secondary small text-uppercase fw-bold">Precio (USD)</label>
+                            <input type="number" class="form-control bg-transparent text-white border-secondary" id="campo-precio" min="0" step="0.01" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-secondary small text-uppercase fw-bold">Stock</label>
+                            <input type="number" class="form-control bg-transparent text-white border-secondary" id="campo-stock" min="0" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-secondary small text-uppercase fw-bold">URL de Imagen</label>
+                            <input type="url" class="form-control bg-transparent text-white border-secondary" id="campo-imagen" placeholder="https://...">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label text-secondary small text-uppercase fw-bold">Descripción</label>
+                            <textarea class="form-control bg-transparent text-white border-secondary" id="campo-descripcion" rows="3" required></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger fw-bold px-4" id="btn-guardar" onclick="guardarComponente()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
