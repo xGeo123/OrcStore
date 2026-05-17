@@ -5,6 +5,15 @@ async function cargarPagina(pagina) {
     const response = await fetch(pagina);
     const data = await response.text();
     document.getElementById("contenido").innerHTML = data;
+
+    if (pagina === "inicio.html") {
+      const carouselEl = document.getElementById("carouselExampleCaptions");
+      if (carouselEl) {
+        new bootstrap.Carousel(carouselEl, { interval: 3000, ride: "carousel" });
+      }
+      cargarDestacados();
+    }
+
     if (pagina === "lista.html") {
       cargarComponentes();
     }
@@ -70,6 +79,45 @@ async function deleteComponente(id) {
     throw new Error(err.msg || `Error ${response.status}`);
   }
   return true;
+}
+
+async function cargarDestacados() {
+  const grid = document.getElementById("destacados-grid");
+  if (!grid) return;
+
+  grid.innerHTML = `
+    <div class="col-12 text-center py-4">
+      <div class="spinner-border text-danger" role="status"></div>
+    </div>`;
+
+  try {
+    const componentes = await getAllComponentes();
+    const destacados = componentes.slice(0, 3);
+
+    if (destacados.length === 0) {
+      grid.innerHTML = `<div class="col-12"><p class="text-secondary text-center">No hay productos disponibles aún.</p></div>`;
+      return;
+    }
+
+    grid.innerHTML = destacados.map((c) => `
+      <div class="col">
+        <div class="card card-product h-100 shadow-sm">
+          <img src="${c.imagen || "https://placehold.co/400x220/1a1a1a/555?text=Sin+imagen"}"
+               class="card-img-top product-img" alt="${c.nombre}"
+               onerror="this.src='https://placehold.co/400x220/1a1a1a/555?text=Sin+imagen'">
+          <div class="card-body d-flex flex-column">
+            <span class="badge bg-secondary mb-2 align-self-start">${c.categoria}</span>
+            <h5 class="card-title fw-bold">${c.nombre}</h5>
+            <h6 class="text-danger mb-3">$${c.precio.toLocaleString("en-US")}</h6>
+            <div class="mt-auto">
+              <button class="btn btn-danger w-100 fw-bold" onclick="cargarPagina('lista.html')">Ver en catálogo</button>
+            </div>
+          </div>
+        </div>
+      </div>`).join("");
+  } catch (error) {
+    grid.innerHTML = `<div class="col-12"><div class="alert alert-danger">Error al cargar productos: ${error.message}</div></div>`;
+  }
 }
 
 function toggleDescripcion(id) {
