@@ -27,7 +27,6 @@ export const getComponenteById = async (req, res) => {
         msg: "ID no válido",
       });
     }
-
     const componente = await Componente.findById(id);
     if (!componente) {
       return res.status(404).json({
@@ -109,7 +108,6 @@ export const deleteComponente = async (req, res) => {
         msg: "ID no válido",
       });
     }
-
     const componente = await Componente.findByIdAndDelete(id);
     if (!componente) {
       return res.status(404).json({
