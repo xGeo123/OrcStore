@@ -1,15 +1,40 @@
-#miidentificador{
-color: red;
-font-size: 25px;
-border: 2px solid black;
-}
-.miclase{
-color: blue;
-font-size: 20px;
-border: 2px dashed green;
-}
 .img-carrusel {
-    height: 400px; 
-    object-fit: contain; 
-    background-color: #2b2b2b; 
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+}
+
+.card-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+}
+
+.product-img {
+    height: 220px;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.form-control::placeholder {
+    color: #666;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: transparent;
+    border-color: #fff;
+    color: white;
+    box-shadow: none;
+}
+
+.hover-white:hover {
+    color: white !important;
 }

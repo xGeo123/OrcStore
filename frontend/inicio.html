@@ -1,10 +1,3 @@
-<style>
-    .img-carrusel {
-        height: 500px; 
-        object-fit: cover;
-        object-position: center;
-    }
-</style>
 <div class="bg-light">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -49,7 +42,18 @@
     <div class="container text-white text-center">
         <h2 class="mb-4">Bienvenido a nuestra sección oscura</h2>
         <p>Aquí puedes poner más información de tu tienda, promociones, o lo que desees.</p>
-        <button class="btn btn-outline-light">Ver más ofertas</button>
+        <button class="btn btn-outline-light" onclick="cargarPagina('lista.html')">Ver más ofertas</button>
+    </div>
+</div>
+
+<div class="bg-dark py-5 border-top border-secondary">
+    <div class="container">
+        <h2 class="fw-bold text-white text-uppercase mb-1">Productos <span class="text-danger">Destacados</span></h2>
+        <p class="text-secondary mb-4">Los componentes más recientes de nuestro catálogo.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="destacados-grid"></div>
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-danger px-4" onclick="cargarPagina('lista.html')">Ver catálogo completo</button>
+        </div>
     </div>
 </div>
 

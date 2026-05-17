@@ -72,6 +72,21 @@ async function deleteComponente(id) {
   return true;
 }
 
+function toggleDescripcion(id) {
+  const corto = document.getElementById("desc-corto-" + id);
+  const completo = document.getElementById("desc-completo-" + id);
+  const btn = document.getElementById("desc-btn-" + id);
+  if (completo.classList.contains("d-none")) {
+    corto.classList.add("d-none");
+    completo.classList.remove("d-none");
+    btn.textContent = "Ver menos";
+  } else {
+    corto.classList.remove("d-none");
+    completo.classList.add("d-none");
+    btn.textContent = "Ver más";
+  }
+}
+
 function renderComponentes(componentes) {
   const grid = document.getElementById("productos-grid");
   if (!grid) return;
@@ -85,9 +100,21 @@ function renderComponentes(componentes) {
     return;
   }
 
+  const LIMITE = 80;
+
   grid.innerHTML = componentes
-    .map(
-      (c) => `
+    .map((c) => {
+      const desc = c.descripcion;
+      const necesitaToggle = desc.length > LIMITE;
+      const descCorta = necesitaToggle ? desc.slice(0, LIMITE) + "…" : desc;
+
+      const descripcionHTML = necesitaToggle
+        ? `<span id="desc-corto-${c._id}" class="card-text text-secondary small">${descCorta}</span>
+           <span id="desc-completo-${c._id}" class="card-text text-secondary small d-none">${desc}</span>
+           <button id="desc-btn-${c._id}" class="btn btn-link btn-sm text-danger p-0 mt-1" onclick="toggleDescripcion('${c._id}')">Ver más</button>`
+        : `<span class="card-text text-secondary small">${desc}</span>`;
+
+      return `
     <div class="col" id="card-${c._id}">
       <div class="card card-product h-100 shadow-sm">
         <img src="${c.imagen || "https://placehold.co/400x220/1a1a1a/555?text=Sin+imagen"}"
@@ -97,7 +124,7 @@ function renderComponentes(componentes) {
           <span class="badge bg-secondary mb-2 align-self-start">${c.categoria}</span>
           <h5 class="card-title fw-bold">${c.nombre}</h5>
           <h6 class="text-danger mb-2">$${c.precio.toLocaleString("en-US")}</h6>
-          <p class="card-text text-secondary small flex-grow-1">${c.descripcion}</p>
+          <div class="mb-2 flex-grow-1">${descripcionHTML}</div>
           <p class="text-secondary small mb-3">Stock: <span class="${c.stock > 0 ? "text-success" : "text-danger"}">${c.stock > 0 ? c.stock + " unidades" : "Sin stock"}</span></p>
           <div class="d-flex gap-2 mt-auto">
             <button class="btn btn-outline-light btn-sm w-50" onclick="abrirModalEditar('${c._id}')">Editar</button>
@@ -105,8 +132,8 @@ function renderComponentes(componentes) {
           </div>
         </div>
       </div>
-    </div>`
-    )
+    </div>`;
+    })
     .join("");
 }
 
