@@ -57,9 +57,6 @@ npm run dev
 # luego abre http://localhost:3000
 ```
 
-Notas:
-- No es necesario ejecutar servidores adicionales ni abrir archivos `file://`.
-- Si prefieres desarrollar con archivos locales, la copia está en `backend/public`.
 ---
 
 ## Rutas de la API
