@@ -40,6 +40,28 @@ El servidor quedará corriendo en `http://localhost:3000`.
 
 ---
 
+## Cómo ver la interfaz (Frontend)
+
+La interfaz ya está copiada dentro de `backend/public` y es servida por el backend. Para ver la aplicación completa solo necesitas arrancar el backend y abrir la siguiente URL en tu navegador:
+
+```
+http://localhost:3000
+```
+
+Pasos rápidos:
+
+```bash
+cd backend
+npm install   # si no lo hiciste antes
+npm run dev
+# luego abre http://localhost:3000
+```
+
+Notas:
+- No es necesario ejecutar servidores adicionales ni abrir archivos `file://`.
+- Si prefieres desarrollar con archivos locales, la copia está en `backend/public`.
+---
+
 ## Rutas de la API
 
 Base URL: `http://localhost:3000/api`
@@ -91,17 +113,7 @@ OrcStore/
 │   │   └── server.js
 │   ├── db/
 │   │   └── cnn_mongodb.js
+│   ├── public/          # interfaz estática servida por Express
 │   ├── .env.example
 │   └── index.js
-└── frontend/
-    ├── index.html
-    ├── inicio.html
-    ├── lista.html
-    ├── login.html
-    ├── about.html
-    ├── assets/
-    ├── estilos/
-    │   └── miestilo.css
-    └── js/
-        └── miscript.js
 ```
